@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DataConverterApp": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
