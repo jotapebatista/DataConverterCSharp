@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  dataconverterapp:
-    image: ${DOCKER_REGISTRY-}dataconverterapp
-    build:
-      context: .
-      dockerfile: DataConverterApp/Dockerfile
