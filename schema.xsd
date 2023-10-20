@@ -1,0 +1,39 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="vehicles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="vehicle" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="motor" minOccurs="0">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element type="xs:short" name="power" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="type" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="wheels">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="wheel" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="size" use="optional"/>
+                            <xs:attribute type="xs:byte" name="pressure" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="type" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
